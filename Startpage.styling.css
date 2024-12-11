@@ -2,8 +2,16 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(./assets/background.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
 .card {
     width: 90%;
+    opacity: 0.6;
     max-width: 470px;
     background: #C5A895;
     color: #840F12;
