@@ -6,26 +6,57 @@
     <meta name="viewport" content="width=device-width,
     initial-scale=1.0">
     <title>Weather app</title>
-    <link rel="stylesheet" href="Startpage.styling.css">
-    <link rel="credetials" href="apiKey.js">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
 
 </head>
 
 <body>
+    <main>
+        <form action="">
+            <input type="text" placeholder="Enter city name..." autocomplete="off" id="valueSearch">
+            <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
 
-    <div class="card">
-        <div class="search">
-            <input type="text" placeholder="Enter city name" spellcheck="false">
-            <button>Search</button>
-        </div>
-        <div class="weather">
-            <h1 class="temp">TEMP</h1>
-            <h2 class="city">CITY</h2>
-        </div>
-    </div>
+        <section class="result">
+            <figure class="name" id="city">
+                <figcaption>London</figcaption>
+                <img src="https://flagsapi.com/GB/shiny/32.png" alt="country-flag">
+            </figure>
+            <figure class="temperature">
+                <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="weather-picture">
+                <figcaption>
+                    <span>20</span>
+                    <sup>o</sup>
+                </figcaption>
+            </figure>
+        </section>
+        <p class="description">
+            Overcast clouds
+        </p>
+
+        <ul>
+            <li>
+                <span>Clouds</span>
+                    <i class="fa-solid fa-cloud"></i>
+                <span class="clouds">98</span>%
+            </li>
+            <li>
+                <span>Humidity</span>
+                    <i class="fa-solid fa-droplet"></i>
+                <span class="humidity">55</span>%
+            </li>
+            <li>
+                <span>Pressure</span>
+                    <i class="fa-solid fa-gauge"></i>
+                <span class="pressure">1001</span>hPa
+            </li>
+        </ul>
+    </main>
+
     <script src="script.js"></script>
 </body>
-<footer>Made by Sophia Saks 2024</footer>
-
 
 </html>
