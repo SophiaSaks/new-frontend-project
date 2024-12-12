@@ -7,7 +7,7 @@
     initial-scale=1.0">
     <title>Weather app</title>
     <link rel="stylesheet" href="Startpage.styling.css">
-    <link rel="credetials" href="config.json">
+    <link rel="credetials" href="apiKey.js">
 
 </head>
 
@@ -23,24 +23,9 @@
             <h2 class="city">CITY</h2>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 <footer>Made by Sophia Saks 2024</footer>
 
-<script>
-    const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=berlin";
-
-    async function checkWeather() {
-        const response = await fetch(apiUrl + `&appid=${apiKey}`);
-        var data = await response.json();
-
-        console.log(data)
-        document.querySelector(".city").innerHTML = data.name;
-        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "C°";
-
-    }
-
-    checkWeather();
-
-</script>
 
 </html>
