@@ -8,13 +8,18 @@
     <title>Weather app</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <nav>Weather app</nav>
     <main>
+        <label class="inputLabel" for="valueSearch">Enter city name:</label>
         <form action="">
-            <input type="text" placeholder="Enter city name..." autocomplete="off" id="valueSearch">
+            <input type="text" placeholder="Write 'Stockholm' for example..." autocomplete="off" id="valueSearch">
             <button>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -23,7 +28,7 @@
         <section class="result">
             <figure class="name" id="city">
                 <figcaption id="figcaption">London</figcaption>
-                <img src="https://flagsapi.com/GB/shiny/32.png" alt="country-flag">
+                <img src="https://flagsapi.com/GB/flat/32.png" alt="country-flag">
             </figure>
             <figure class="temperature">
                 <img src="http://openweathermap.org/img/wn/10d@4x.png" alt="weather-picture">
@@ -55,6 +60,7 @@
             </li>
         </ul>
     </main>
+    <footer>By Sophia Saks 2024</footer>
 
     <script src="script.js"></script>
 </body>

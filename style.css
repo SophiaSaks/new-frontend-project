@@ -5,74 +5,94 @@
 }
 
 body {
-    margin: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(./assets/background.png);
+    background-color: #C2FCDC;
     background-repeat: no-repeat;
     background-size: cover;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "Poppins", sans-serif;
 }
 
 main {
-    width: 400px;
+    width: 25rem;
     height: max-content;
-    min-height: 400px;
-    background-color: antiquewhite;
+    min-height: 25rem;
+    background-color: #7AD2A2;
+    color:#303030;
     opacity: 0.8;
-    border-radius: 30px;
-    box-shadow: 0 10px 20px #5553;
-    padding: 30px;
+    border-radius: 1.875rem;
+    box-shadow: 0 0.625rem 1.25rem #5553;
+    padding: 1.5rem;
 }
 
 main form {
-    border: 2px grey solid;
+    border: 0.125rem #fff solid;
     display: flex; 
     justify-content: space-between;
-    border-radius: 30px;
+    border-radius: 1.875rem;
+}
+
+main form input{
+    width: 16rem;
+    letter-spacing: 0.125rem;
+    font-size: 1.125rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main form input::placeholder{
+    font-size: 0.75rem;
+    letter-spacing: 0.013rem;
+    color: darkolivegreen;
 }
 
 main form input, main form button {
     border: none; 
     background-color: transparent;
     outline: none;
-    padding: 10px;
+    padding: 0.625rem;
+    cursor: pointer;
 }
 
 main form i {
     opacity: 0.9;
 }
 
+#figcaption{
+    font-family: "Lora", serif;
+    color: #000;
+}
+
 main .result {
-    padding-top: 20px;
+    padding-top: 1.25rem;
     text-align: center;
 }
 
 main .result .name {
     font-weight: bold;
-    font-size: 34px;
+    font-size: 2.125rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 main .temperature img{
-    width: 150px;
+    width: 9.375rem;
     filter: drop-shadow(
-        0 10px 50px #840F12
+        0 0.625rem 3.125rem #840F12
     );
 }
 
 main .temperature figcaption{
     font-size: 3rem;
-
+    font-family: "Lora", serif;
+    color: #000;
 }
 
 main .description{
-    padding: 10px 0 30px;
+    padding: 0.625rem 0 1.875rem;
     text-align: center;
 }
 
@@ -80,36 +100,98 @@ main ul {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
+    gap: 0.75rem;
 }
 
 main li {
-    background-color: #4FC08A;
+    background-color: #3F2D7A;
     color: #f9f9f9;
-    border-radius: 12px;
-    padding: 20px 12px;
-    background-image: linear-gradient(
-        to bottom,
-        transparent 60%,
-        #0003 80%
-    );
+    border-radius: 0.75rem;
+    padding: 1.25rem 0.75rem;
     text-align: center;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.031rem;
 }
 
 main li:nth-child(2){
-    background-color: #B890F1;
+    background-color: #68216A;
 }
 
 main li:nth-child(3){
-    background-color: #E7968A;
+    background-color: #193C29;
 }
 
 main li i {
     font-size: 2rem;
     display: block!important;
-    margin: 12px 0;
+    margin: 0.75rem 0;
 }
+
+main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+
+@keyframes errorEffect{
+    0%{
+        transform: translate(0.75rem , 0.625rem);
+    }
+    25%{
+        transform: translate(-0.313rem , 0.125rem);
+    }
+    50%{
+        transform: translate(1rem, 0.25rem);
+    }
+    75%{
+        transform: translate(-0.125rem ,0.313rem);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
+
+.inputLabel{
+    font-size: 0.75rem;
+    padding-left: 0.5rem;
+    font-weight: bold;
+    color: #0A523D;
+}
+
+@media screen and (max-width:860px){
+    footer, nav{
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 860px) {
+    footer, nav{
+        color: #fff;
+        background-color: #023e4a;
+        position: absolute;
+        width: 60%;
+        text-align: center;
+    }
+    footer{
+        bottom: 1rem;
+        height: 2rem;
+        border-radius: 1rem;
+        font-size: 0.75rem;
+        opacity: 0.6;
+        margin-top: 0.5rem;
+        padding-top: 0.313rem;
+    }
+    nav{
+        top: 0;
+        border-radius: 2rem;
+        height: 6%;
+        padding-top: 0rem;
+        font-size: 1.75rem;
+        opacity: 0.9;
+    }
+  }
+
+
+
+
