@@ -12,7 +12,7 @@ let main = document.querySelector('main');
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    if(valueSearch.value != ''){
+    if (valueSearch.value != '') {
         checkWeather();
     }
 })
@@ -21,9 +21,9 @@ const apiKey = "5934d7c41c30f5c76770d6a905d6848e";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&apikey=" + apiKey;
 
 async function checkWeather() {
-    const response = await fetch(apiUrl + "&q=" + valueSearch.value);
+    const response = await fetch("https://localhost:8080/api" + value)
     var data = await response.json();
-    if(data.cod == 200){
+    if (data.cod == 200) {
         city.querySelector('figcaption').innerText = data.name;
         city.querySelector('img').src = `https://flagsapi.com/${data.sys.country}/flat/32.png`;
 
@@ -35,13 +35,12 @@ async function checkWeather() {
         clouds.innerText = data.clouds.all;
         humidity.innerText = data.main.humidity;
         pressure.innerText = data.main.pressure;
-    }else{
+    } else {
         main.classList.add('error');
         setTimeout(() => {
             main.classList.remove('error')
         }, 1000);
     }
-
     valueSearch.value = '';
 }
 

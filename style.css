@@ -133,6 +133,7 @@ main.error{
     animation: errorEffect 0.3s linear 1;
 }
 
+
 @keyframes errorEffect{
     0%{
         transform: translate(0.75rem , 0.625rem);
@@ -159,7 +160,7 @@ main.error{
 }
 
 @media screen and (max-width:860px){
-    footer, nav{
+    footer, nav, main li{
         display: none;
     }
 }
